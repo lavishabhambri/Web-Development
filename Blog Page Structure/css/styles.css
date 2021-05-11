@@ -1,0 +1,72 @@
+/* Main secxtion */
+main{
+  width: 70%;
+  display: inline-block;
+}
+
+p{
+  color:blue;
+}
+
+h1{
+  font-size:40px;
+}
+
+/* Grouping of elements */
+h1, p{
+  font-family: sans-serif;
+}
+
+/* Nesting of elements - means all h1 in li */
+li h1{
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.uppercase{
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+#blog-description{
+  color: #314831;
+}
+
+
+#blog-title:hover{
+  color: orange;
+}
+
+/* Aside section */
+.widget{
+  border-top: 4px solid black;
+}
+
+/* All inputs under the widget class */
+aside{
+  display: inline-block;
+  width: 21%;
+  vertical-align:top;
+  margin-left:4%;
+}
+
+.widget input{
+  display: block;
+  background-color: #F7F7F7;
+  margin-bottom: 15px;
+  padding: 4px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+button[type="submit"]{
+  font-size: 1.2rem;
+  background-color: #000;
+  color:#fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.widget-tile{
+  font-size: 1.2rem;
+}

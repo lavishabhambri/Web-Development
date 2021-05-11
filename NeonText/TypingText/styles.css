@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #181818;
+}
+
+.loader{
+  position: relative;
+}
+
+.loader::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 2px;
+  height: 100%;
+  background: #03e9f4;
+  animation: blinkCursor 0.8s steps(3) infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 75%{
+    opacity: 1;
+  }
+  76%, 100%{
+    opacity: 0;
+  }
+}
+
+.loader h2{
+  position: relative;
+  color: #03e9f4;
+  letter-spacing: 5px;
+  font-size: 4em;
+  text-transform: uppercase;
+  animation: typing 8s steps(15) infinite;
+}
+
+@keyframes typing{
+  0%{
+    width: 0%;
+  }
+
+  30%{
+    width: 683.75px;
+  }
+}
