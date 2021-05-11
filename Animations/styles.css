@@ -1,0 +1,134 @@
+/* Animation-1 */
+.div1{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: pink;
+  transition: 1s ease-in-out;
+}
+
+.div1:hover{
+  transform: scale(1.5) translate(100px);
+}
+
+/* Animation-2 */
+.div2{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 250px;
+  left: 20%;
+  background-color: green;
+  transition: 1.5s ease-in-out;
+  /* animation: changeShape 1s ease-in-out infinite alternate; */
+}
+
+.div2:hover{
+  transform: rotate(360deg);
+}
+
+/* Animation-3 */
+@keyframes changeShape {
+  0%{
+    border-radius: 0%;
+  }
+  25%{
+    border-radius: 12.5%;
+  }
+  50%{
+    border-radius: 25%;
+  }
+  100%{
+    border-radius: 50%;
+  }
+}
+
+.div3{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 400px;
+  left: 20%;
+  background-color: blue;
+  transition: 1.5s ease-in-out;
+  animation: changeShape 1s ease-in-out infinite alternate;
+}
+
+/* Animation-4 */
+.div4{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 550px;
+  margin-bottom: 200px;
+  left: 20%;
+  background-color: orange;
+  transition: 1.5s ease-in-out;
+}
+
+
+@keyframes upDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+.div4:hover{
+  animation: upDown 3s ease-in-out infinite alternate;
+}
+
+
+/* Animation-5 */
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 100%;
+  }
+}
+.fadeInAnimation h1{
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+/* Animation-6 */
+/* We can apply multiple animations to same object */
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  360%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reduceSize {
+  0%{
+    height: 200px;
+    width: 200px;
+  }
+
+  100%{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+
+.div6{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 800px;
+  margin-bottom: 200px;
+  left: 20%;
+  background-color: black;
+  /* In case of multiple animations specify all features of animations like below */
+  animation-name: changeShape, rotate, reduceSize;
+  animation-duration: 0.8s, 0.8s, 0.8s;
+  animation-iteration-count: infinite, infinite, infinite;
+  animation-duration: alternate, alternate, alternate;
+
+}
